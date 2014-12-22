@@ -1,0 +1,41 @@
+#VRML V2.0 utf8 Prop
+
+DEF Prop Transform{
+  children [
+    Transform{
+      children DEF Fan Shape{
+        geometry Cylinder{ height .07 radius .27 }
+        appearance DEF Blue Appearance{ material Material{ diffuseColor 0 0 1 specularColor .8 .8 .8 ambientIntensity .4 } }
+      }
+      children DEF Fan Inline{
+        url "fan.wrl"
+      }
+      translation .45 -.05 0
+    }
+    Transform{
+      children USE Fan
+      translation -.45 -.05 0
+    }
+    Transform{
+      children Shape{ geometry Box{ size 1 .07 .25 } appearance USE Blue }
+      translation 0 -.2 0
+    }
+    Transform{
+      children DEF Cone Shape{ geometry Cylinder{ height .2 radius .135 }  appearance USE Blue }
+      translation .45 -.135 0
+    }
+    Transform{
+      children USE Cone
+      translation -.45 -.135 0
+    }
+    Transform{
+      children Shape{
+        geometry Box{ size .07 .2 .07 }
+        appearance DEF Black Appearance{ material Material{ diffuseColor 0 0 0 specularColor .5 .5 .5 }}
+      }
+      translation 0 -.1 0
+    }
+  ]
+  translation 2.25 0 0
+  rotation 0 1 0 1.57
+} # end Prop

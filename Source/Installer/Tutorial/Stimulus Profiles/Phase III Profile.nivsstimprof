@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StimulusProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FileFormatVersion Major="2012" Minor="0" Fix="0" Build="0" />
+	<Version Major="1" Minor="0" Fix="0" Build="0" />
+	<Setup Name="Setup">
+		<Step xsi:type="StartLoggingStep">
+			<ConfigurationName>Log1</ConfigurationName>
+			<FilePath>Phase III.tdms</FilePath>
+			<Rate>100</Rate>
+			<TriggerChannel Path="" />
+			<TriggerCondition>none</TriggerCondition>
+			<HighLimit>100</HighLimit>
+			<LowLimit>0</LowLimit>
+			<ReplaceFile>true</ReplaceFile>
+			<TimestampFile>false</TimestampFile>
+			<ChannelGroups>
+				<ChannelGroup Name="Travel">
+					<Channel Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					<Channel Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+				</ChannelGroup>
+				<ChannelGroup Name="Elevation">
+					<Channel Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					<Channel Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+				</ChannelGroup>
+			</ChannelGroups>
+			<PreTriggerDuration>0</PreTriggerDuration>
+			<PostTriggerDuration>0</PostTriggerDuration>
+			<LogFileSegmentingOptions>DoNotSegment</LogFileSegmentingOptions>
+			<Size>10000000</Size>
+		</Step>
+		<Step xsi:type="RealTimeSequenceCallStep">
+			<ParameterAssignments>
+				<ParameterAssignment Name="Channel">
+					<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/User Channels/Reset MIL" />
+				</ParameterAssignment>
+				<ParameterAssignment Name="NewValue">
+					<Value xsi:type="DoubleValue">
+						<Value>1</Value>
+					</Value>
+				</ParameterAssignment>
+			</ParameterAssignments>
+			<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+			<Target />
+			<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+		</Step>
+		<Step xsi:type="StepGroup" Name="Zero">
+			<Step xsi:type="RealTimeSequenceGroupStep" Name="NewSetpoint 0,0">
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>0</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>0</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+			</Step>
+			<Step xsi:type="RealTimeSequenceCallStep">
+				<ParameterAssignments>
+					<ParameterAssignment Name="ElevationSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>2</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTimeout">
+						<Value xsi:type="DoubleValue">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>4</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSettleTime">
+						<Value xsi:type="DoubleValue">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTimeout">
+						<Value xsi:type="DoubleValue">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+				</ParameterAssignments>
+				<SequencePath>CheckElevationAndTravel.nivsseq</SequencePath>
+				<Target />
+				<OutputEvaluation xsi:type="BooleanEvaluation">
+					<Invert>false</Invert>
+				</OutputEvaluation>
+			</Step>
+		</Step>
+	</Setup>
+	<Main Name="Main">
+		<Step xsi:type="StepGroup" Name="Setpoint 1">
+			<Step xsi:type="RealTimeSequenceGroupStep" Name="NewSetpoint 10,-30">
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>10</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>-30</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+			</Step>
+			<Step xsi:type="RealTimeSequenceCallStep">
+				<ParameterAssignments>
+					<ParameterAssignment Name="ElevationSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>2</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>4</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+				</ParameterAssignments>
+				<SequencePath>CheckElevationAndTravel.nivsseq</SequencePath>
+				<Target />
+				<OutputEvaluation xsi:type="BooleanEvaluation">
+					<Invert>false</Invert>
+				</OutputEvaluation>
+			</Step>
+		</Step>
+		<Step xsi:type="StepGroup" Name="Setpoint 2">
+			<Step xsi:type="RealTimeSequenceGroupStep" Name="NewSetpoint 17,25">
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>17</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>25</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+			</Step>
+			<Step xsi:type="RealTimeSequenceCallStep">
+				<ParameterAssignments>
+					<ParameterAssignment Name="ElevationSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>2</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>4</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+				</ParameterAssignments>
+				<SequencePath>CheckElevationAndTravel.nivsseq</SequencePath>
+				<Target />
+				<OutputEvaluation xsi:type="BooleanEvaluation">
+					<Invert>false</Invert>
+				</OutputEvaluation>
+			</Step>
+		</Step>
+		<Step xsi:type="StepGroup" Name="Setpoint 3">
+			<Step xsi:type="RealTimeSequenceGroupStep" Name="NewSetpoint 2,-20">
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>2</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>-20</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+			</Step>
+			<Step xsi:type="RealTimeSequenceCallStep">
+				<ParameterAssignments>
+					<ParameterAssignment Name="ElevationSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>2</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>4</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTimeout">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+				</ParameterAssignments>
+				<SequencePath>CheckElevationAndTravel.nivsseq</SequencePath>
+				<Target />
+				<OutputEvaluation xsi:type="BooleanEvaluation">
+					<Invert>false</Invert>
+				</OutputEvaluation>
+			</Step>
+		</Step>
+	</Main>
+	<CleanUp Name="Clean Up">
+		<Step xsi:type="StepGroup" Name="Final Setpoint">
+			<Step xsi:type="RealTimeSequenceGroupStep" Name="NewSetpoint 0,0">
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>0</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+				<RealTimeSequence>
+					<Description>Elevation Setpoint</Description>
+					<ParameterAssignments>
+						<ParameterAssignment Name="Channel">
+							<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+						</ParameterAssignment>
+						<ParameterAssignment Name="NewValue">
+							<Value xsi:type="DoubleValue">
+								<Value>0</Value>
+							</Value>
+						</ParameterAssignment>
+					</ParameterAssignments>
+					<SequencePath>&lt;CommonDocuments&gt;:\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</SequencePath>
+					<Target />
+					<OutputEvaluation xsi:type="AlwaysPassEvaluation" />
+				</RealTimeSequence>
+			</Step>
+			<Step xsi:type="RealTimeSequenceCallStep">
+				<ParameterAssignments>
+					<ParameterAssignment Name="ElevationSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>2</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationSettleTime">
+						<Value xsi:type="DoubleValue" Units="sec">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="ElevationTimeout">
+						<Value xsi:type="DoubleValue">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSignal">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSetpoint">
+						<Value xsi:type="SystemDefinitionChannelResource" Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTolerance">
+						<Value xsi:type="DoubleValue">
+							<Value>4</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelSettleTime">
+						<Value xsi:type="DoubleValue">
+							<Value>3</Value>
+						</Value>
+					</ParameterAssignment>
+					<ParameterAssignment Name="TravelTimeout">
+						<Value xsi:type="DoubleValue">
+							<Value>30</Value>
+						</Value>
+					</ParameterAssignment>
+				</ParameterAssignments>
+				<SequencePath>CheckElevationAndTravel.nivsseq</SequencePath>
+				<Target />
+				<OutputEvaluation xsi:type="BooleanEvaluation">
+					<Invert>false</Invert>
+				</OutputEvaluation>
+			</Step>
+		</Step>
+		<Step xsi:type="StopLoggingStep">
+			<ConfigurationName>Log1</ConfigurationName>
+		</Step>
+	</CleanUp>
+	<ResultsDirectory>Test Results</ResultsDirectory>
+</StimulusProfile>

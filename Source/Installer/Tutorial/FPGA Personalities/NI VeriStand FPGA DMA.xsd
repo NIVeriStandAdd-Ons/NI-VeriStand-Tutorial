@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CategoryNameType">
+    <xs:restriction base="xs:token">
+      <xs:pattern value=".+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CategoryPathType">
+    <xs:restriction base="xs:token">
+      <xs:pattern value=".+(\\.+)*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChannelNameType">
+    <xs:restriction base="xs:token">
+      <xs:pattern value=".+" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VersionType">
+    <xs:restriction base="xs:double">
+      <xs:pattern value="[0-9]+.[0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SymbolType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="AI" />
+      <xs:enumeration value="AO" />
+      <xs:enumeration value="DI" />
+      <xs:enumeration value="DO" />
+      <xs:enumeration value="PWM In" />
+      <xs:enumeration value="PWM Out" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="CategoryGroup">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Category">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" type="CategoryNameType" />
+            <xs:element minOccurs="0" name="Description" type="xs:string" />
+            <xs:element minOccurs="0" name="Symbol" type="SymbolType" />
+            <xs:sequence minOccurs="0">
+              <xs:group ref="CategoryGroup" />
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="BasicValueGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InitialValue" type="xs:double" />
+      <xs:element minOccurs="0" name="Scale" type="xs:double" />
+      <xs:element minOccurs="0" name="Offset" type="xs:double" />
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="BasicParameterInfoGroup">
+    <xs:sequence>
+      <xs:element name="Name" type="ChannelNameType" />
+      <xs:element minOccurs="0" name="ControlName" type="xs:string" />
+      <xs:group ref="BasicValueGroup" />
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="BasicChannelInfoGroup">
+    <xs:sequence>
+      <xs:element name="Name" type="ChannelNameType" />
+      <xs:element minOccurs="0" name="Description" />
+      <xs:element minOccurs="0" name="Category" type="CategoryPathType" />
+      <xs:group ref="BasicValueGroup" />
+      <xs:element minOccurs="0" name="Unit" type="xs:string" />
+      <xs:element minOccurs="0" name="Symbol" type="SymbolType" />
+      <xs:element minOccurs="0" name="Parameters">
+        <xs:complexType>
+          <xs:sequence maxOccurs="unbounded">
+            <xs:group ref="ParameterGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="FixedPointInfoGroup">
+    <xs:sequence>
+      <xs:element name="FXPWL" type="xs:byte" />
+      <xs:element minOccurs="0" name="FXPIWL" type="xs:byte" />
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="ChannelTypeGroup">
+    <xs:choice>
+      <xs:element name="Boolean">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I8">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U8">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I16">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U16">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I32">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U32">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I64">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U64">
+        <xs:complexType>
+          <xs:group ref="BasicChannelInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPI32">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicChannelInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPU32">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicChannelInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPI64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicChannelInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPU64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicChannelInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PWM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicChannelInfoGroup" />
+            <xs:element minOccurs="0" name="PWMPeriod" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Void">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Size" type="xs:byte" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="ParameterGroup">
+    <xs:choice>
+      <xs:element name="Boolean">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I8">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U8">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I16">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U16">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I32">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U32">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I64">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="U64">
+        <xs:complexType>
+          <xs:group ref="BasicParameterInfoGroup" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPI32">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicParameterInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPU32">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicParameterInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPI64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicParameterInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FXPU64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicParameterInfoGroup" />
+            <xs:group ref="FixedPointInfoGroup" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PWM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="BasicParameterInfoGroup" />
+            <xs:element minOccurs="0" name="PWMPeriod" type="xs:unsignedInt" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="DMAInformationGroup">
+    <xs:sequence>
+      <xs:element name="Packets">
+      	<xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Packet">
+        <xs:complexType>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="ChannelTypeGroup" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="FPGADMAChannelData">
+    <xs:complexType>
+      <xs:all>
+        <xs:element minOccurs="0" name="Version">
+          <xs:simpleType>
+            <xs:restriction base="VersionType">
+              <xs:pattern value="[0-9].[0-9]" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Bitfile" type="xs:string" />
+        <xs:element minOccurs="0" name="Categories">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:group ref="CategoryGroup" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="DMA_Read">
+          <xs:complexType>
+            <xs:group ref="DMAInformationGroup" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="DMA_Write">
+          <xs:complexType>
+            <xs:group ref="DMAInformationGroup" />
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

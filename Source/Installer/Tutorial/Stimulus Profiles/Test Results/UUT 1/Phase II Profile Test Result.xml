@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="TRML.xsl"?>
+<TestResults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" uuid="029dd55a-415e-47fe-97bb-e3f1fa610ace" xmlns="http://www.ieee.org/ATML/2007/TestResults">
+	<Personnel>
+		<SystemOperator ID="DynEdge-PC\DynEdge" />
+	</Personnel>
+	<References>
+		<Reference uuid="9c88e5a0-410f-4b7d-bec4-8bf1f2734e69" name="Phase II Profile">
+			<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Users\Public\Documents\National Instruments\NI VeriStand 2013\Projects\Tutorial\Stimulus Profiles\Phase II Profile.nivsstimprof</Text>
+		</Reference>
+	</References>
+	<ResultSet ID="Test Result" name="C:\Users\Public\Documents\National Instruments\NI VeriStand 2013\Projects\Tutorial\Stimulus Profiles\Test Results\UUT 1\Phase II Profile Test Result.xml" startDateTime="2013-10-21T15:40:03.0689918-05:00" endDateTime="2013-10-21T15:40:30.5705648-05:00">
+		<Outcome value="Passed" />
+		<TestGroup ID="Setup" name="Setup" startDateTime="2013-10-21T15:40:03.0699919-05:00" endDateTime="2013-10-21T15:40:03.0699919-05:00">
+			<Outcome value="Passed" />
+			<TestGroup ID="Setup/Real-Time Sequence Group: New Group" name="Real-Time Sequence Group: New Group" startDateTime="2013-10-21T15:40:03.0699919-05:00" endDateTime="2013-10-21T15:40:03.124995-05:00">
+				<Outcome value="Passed" />
+				<Test ID="Setup/Real-Time Sequence Group: New Group/Call RealTimeSequence: Set Single Value.nivsseq" name="Set Single Value" startDateTime="2013-10-21T15:40:03.0699919-05:00" endDateTime="2013-10-21T15:40:03.1219949-05:00">
+					<Parameters>
+						<Parameter ID="NewValue">
+							<Data>
+								<Datum xsi:type="double" value="0" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Channel">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="Setup/Real-Time Sequence Group: New Group/Call RealTimeSequence: Set Single Value.nivsseq.SequenceFile" name="Set Single Value">
+							<Reference uuid="188272b0-7a30-48c9-b32f-46ad6c431055" name="Set Single Value">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Users\Public\Documents\National Instruments\NI VeriStand 2013\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Pass">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+				<Test ID="Setup/Real-Time Sequence Group: New Group/Call RealTimeSequence: Set Single Value.nivsseq" name="Set Single Value" startDateTime="2013-10-21T15:40:03.0699919-05:00" endDateTime="2013-10-21T15:40:03.124995-05:00">
+					<Parameters>
+						<Parameter ID="NewValue">
+							<Data>
+								<Datum xsi:type="double" value="0" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Channel">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="Setup/Real-Time Sequence Group: New Group/Call RealTimeSequence: Set Single Value.nivsseq.SequenceFile" name="Set Single Value">
+							<Reference uuid="4634ba1a-c85f-42e4-973a-35aa257909af" name="Set Single Value">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Users\Public\Documents\National Instruments\NI VeriStand 2013\Stimulus Profiles\Tutorial\Set Single Value.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Pass">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+			</TestGroup>
+			<Test ID="Setup/Start Log: Log1" name="Start Log: Log1" startDateTime="2013-10-21T15:40:03.1299953-05:00" endDateTime="2013-10-21T15:40:03.1379958-05:00">
+				<Parameters>
+					<Parameter ID="Setup/Start Log: Log1.LogFile" name="Log File">
+						<Reference uuid="6466152b-aac2-4247-a4f6-144a1f7dad27" name="Phase II Solution">
+							<Text xmlns="http://www.ieee.org/ATML/2006/Common">Phase II Solution.tdms</Text>
+						</Reference>
+					</Parameter>
+				</Parameters>
+				<Outcome value="Passed" />
+			</Test>
+			<Test ID="Setup/Call RealTimeSequence: Wait.nivsseq" name="Wait" startDateTime="2013-10-21T15:40:03.1379958-05:00" endDateTime="2013-10-21T15:40:08.2062857-05:00">
+				<Parameters>
+					<Parameter ID="Duration">
+						<Data>
+							<Datum xsi:type="double" nonStandardUnit="sec" value="5" xmlns="http://www.ieee.org/ATML/2006/Common" />
+						</Data>
+					</Parameter>
+					<Parameter ID="Setup/Call RealTimeSequence: Wait.nivsseq.SequenceFile" name="Wait">
+						<Reference uuid="29072bd4-0c27-46bf-8a21-22112a3e5cf1" name="Wait">
+							<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Timing\Wait.nivsseq</Text>
+						</Reference>
+					</Parameter>
+				</Parameters>
+				<Outcome value="Passed" />
+				<TestResult ID="SequenceTime">
+					<TestData>
+						<Datum xsi:type="double" value="5" xmlns="http://www.ieee.org/ATML/2006/Common" />
+					</TestData>
+					<TestLimits>
+						<Limits>
+							<LimitPair operator="AND" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Limit comparator="LE">
+									<Datum xsi:type="double" value="100" />
+								</Limit>
+								<Limit comparator="GE">
+									<Datum xsi:type="double" value="0" />
+								</Limit>
+							</LimitPair>
+						</Limits>
+					</TestLimits>
+				</TestResult>
+			</Test>
+		</TestGroup>
+		<TestGroup ID="Main" name="Main" startDateTime="2013-10-21T15:40:08.2102859-05:00" endDateTime="2013-10-21T15:40:08.2102859-05:00">
+			<Outcome value="Passed" />
+			<TestGroup ID="Main/Real-Time Sequence Group: New Group" name="Real-Time Sequence Group: New Group" startDateTime="2013-10-21T15:40:08.2102859-05:00" endDateTime="2013-10-21T15:40:09.3393505-05:00">
+				<Outcome value="Passed" />
+				<Test ID="Main/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq" name="Ramp" startDateTime="2013-10-21T15:40:08.2102859-05:00" endDateTime="2013-10-21T15:40:09.3173492-05:00">
+					<Parameters>
+						<Parameter ID="RampOut">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="InitialValue">
+							<Data>
+								<Datum xsi:type="double" value="0" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="FinalValue">
+							<Data>
+								<Datum xsi:type="double" value="11" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Duration">
+							<Data>
+								<Datum xsi:type="double" nonStandardUnit="sec" value="1" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Main/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq.SequenceFile" name="Ramp">
+							<Reference uuid="ab2d527a-cc05-41b7-9c6a-465672f8df6c" name="Ramp">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Waveforms\Ramp.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Output">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+				<Test ID="Main/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq" name="Ramp" startDateTime="2013-10-21T15:40:08.2102859-05:00" endDateTime="2013-10-21T15:40:09.3393505-05:00">
+					<Parameters>
+						<Parameter ID="RampOut">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="InitialValue">
+							<Data>
+								<Datum xsi:type="double" value="0" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="FinalValue">
+							<Data>
+								<Datum xsi:type="double" value="33" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Duration">
+							<Data>
+								<Datum xsi:type="double" nonStandardUnit="sec" value="1" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Main/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq.SequenceFile" name="Ramp">
+							<Reference uuid="fbcb09c7-c59b-436f-ad81-845ffdcb7f0d" name="Ramp">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Waveforms\Ramp.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Output">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+			</TestGroup>
+			<Test ID="Main/Call RealTimeSequence: Wait.nivsseq" name="Wait" startDateTime="2013-10-21T15:40:09.3443508-05:00" endDateTime="2013-10-21T15:40:19.3899253-05:00">
+				<Parameters>
+					<Parameter ID="Duration">
+						<Data>
+							<Datum xsi:type="double" nonStandardUnit="sec" value="10" xmlns="http://www.ieee.org/ATML/2006/Common" />
+						</Data>
+					</Parameter>
+					<Parameter ID="Main/Call RealTimeSequence: Wait.nivsseq.SequenceFile" name="Wait">
+						<Reference uuid="61e8e9c9-1655-4aa6-8ccf-5d38b049b616" name="Wait">
+							<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Timing\Wait.nivsseq</Text>
+						</Reference>
+					</Parameter>
+				</Parameters>
+				<Outcome value="Passed" />
+				<TestResult ID="SequenceTime">
+					<TestData>
+						<Datum xsi:type="double" value="10" xmlns="http://www.ieee.org/ATML/2006/Common" />
+					</TestData>
+					<TestLimits>
+						<Limits>
+							<LimitPair operator="AND" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Limit comparator="LE">
+									<Datum xsi:type="double" value="100" />
+								</Limit>
+								<Limit comparator="GE">
+									<Datum xsi:type="double" value="0" />
+								</Limit>
+							</LimitPair>
+						</Limits>
+					</TestLimits>
+				</TestResult>
+			</Test>
+		</TestGroup>
+		<TestGroup ID="Clean Up" name="Clean Up" startDateTime="2013-10-21T15:40:19.401926-05:00" endDateTime="2013-10-21T15:40:19.401926-05:00">
+			<Outcome value="Passed" />
+			<TestGroup ID="Clean Up/Real-Time Sequence Group: New Group" name="Real-Time Sequence Group: New Group" startDateTime="2013-10-21T15:40:19.401926-05:00" endDateTime="2013-10-21T15:40:20.4969887-05:00">
+				<Outcome value="Passed" />
+				<Test ID="Clean Up/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq" name="Ramp" startDateTime="2013-10-21T15:40:19.401926-05:00" endDateTime="2013-10-21T15:40:20.4929884-05:00">
+					<Parameters>
+						<Parameter ID="RampOut">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="InitialValue">
+							<Data>
+								<Datum xsi:type="double" value="11" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="FinalValue">
+							<Data>
+								<Datum xsi:type="double" value="19" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Duration">
+							<Data>
+								<Datum xsi:type="double" nonStandardUnit="sec" value="1" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Clean Up/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq.SequenceFile" name="Ramp">
+							<Reference uuid="ec95451b-1248-46a0-be51-76151bf595d8" name="Ramp">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Waveforms\Ramp.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Output">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+				<Test ID="Clean Up/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq" name="Ramp" startDateTime="2013-10-21T15:40:19.401926-05:00" endDateTime="2013-10-21T15:40:20.4969887-05:00">
+					<Parameters>
+						<Parameter ID="RampOut">
+							<Data>
+								<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+									<Value>Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint</Value>
+								</Datum>
+							</Data>
+						</Parameter>
+						<Parameter ID="InitialValue">
+							<Data>
+								<Datum xsi:type="double" value="33" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="FinalValue">
+							<Data>
+								<Datum xsi:type="double" value="-12" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Duration">
+							<Data>
+								<Datum xsi:type="double" nonStandardUnit="sec" value="1" xmlns="http://www.ieee.org/ATML/2006/Common" />
+							</Data>
+						</Parameter>
+						<Parameter ID="Clean Up/Real-Time Sequence Group: New Group/Call RealTimeSequence: Ramp.nivsseq.SequenceFile" name="Ramp">
+							<Reference uuid="39156ff1-1abd-45f1-93a9-bba4281b0abe" name="Ramp">
+								<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Waveforms\Ramp.nivsseq</Text>
+							</Reference>
+						</Parameter>
+					</Parameters>
+					<Outcome value="Passed" />
+					<TestResult ID="Output">
+						<TestData>
+							<Datum xsi:type="string" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Value>&lt;Void&gt;</Value>
+							</Datum>
+						</TestData>
+					</TestResult>
+				</Test>
+			</TestGroup>
+			<Test ID="Clean Up/Call RealTimeSequence: Wait.nivsseq" name="Wait" startDateTime="2013-10-21T15:40:20.502989-05:00" endDateTime="2013-10-21T15:40:30.5445633-05:00">
+				<Parameters>
+					<Parameter ID="Duration">
+						<Data>
+							<Datum xsi:type="double" nonStandardUnit="sec" value="10" xmlns="http://www.ieee.org/ATML/2006/Common" />
+						</Data>
+					</Parameter>
+					<Parameter ID="Clean Up/Call RealTimeSequence: Wait.nivsseq.SequenceFile" name="Wait">
+						<Reference uuid="325739a0-da5d-490a-b879-cb012b2ca492" name="Wait">
+							<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Program Files (x86)\National Instruments\VeriStand 2013\nivs.lib\Sequence Library\Standard\Timing\Wait.nivsseq</Text>
+						</Reference>
+					</Parameter>
+				</Parameters>
+				<Outcome value="Passed" />
+				<TestResult ID="SequenceTime">
+					<TestData>
+						<Datum xsi:type="double" value="10" xmlns="http://www.ieee.org/ATML/2006/Common" />
+					</TestData>
+					<TestLimits>
+						<Limits>
+							<LimitPair operator="AND" xmlns="http://www.ieee.org/ATML/2006/Common">
+								<Limit comparator="LE">
+									<Datum xsi:type="double" value="100" />
+								</Limit>
+								<Limit comparator="GE">
+									<Datum xsi:type="double" value="0" />
+								</Limit>
+							</LimitPair>
+						</Limits>
+					</TestLimits>
+				</TestResult>
+			</Test>
+			<Test ID="Clean Up/Stop Log: Log1" name="Stop Log: Log1" startDateTime="2013-10-21T15:40:30.5495636-05:00" endDateTime="2013-10-21T15:40:30.5665646-05:00">
+				<Parameters>
+					<Parameter ID="LogFile.1" name="Log File">
+						<Reference uuid="677b836a-cb49-4e82-ad1c-094439e33af9" name="Phase II Solution">
+							<Text xmlns="http://www.ieee.org/ATML/2006/Common">C:\Users\Public\Documents\National Instruments\NI VeriStand 2013\Projects\Tutorial\Stimulus Profiles\Test Results\UUT 1\Phase II Solution.tdms</Text>
+						</Reference>
+					</Parameter>
+				</Parameters>
+				<Outcome value="Passed" />
+			</Test>
+		</TestGroup>
+	</ResultSet>
+	<TestDescription>
+		<Definition version="1_0_0_0" xmlns="http://www.ieee.org/ATML/2006/Common">
+			<Identification />
+		</Definition>
+	</TestDescription>
+	<UUT UutType="software">
+		<SerialNumber xmlns="http://www.ieee.org/ATML/2006/Common">UUT 1</SerialNumber>
+	</UUT>
+</TestResults>

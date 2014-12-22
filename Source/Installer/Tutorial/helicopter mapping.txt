@@ -1,0 +1,8 @@
+Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Outports/motor voltage 2	Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Inports/motor voltage 2
+Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Outports/motor voltage 1	Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Inports/motor voltage 1
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/travel speed (deg//sec)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel speed (deg//sec)
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/pitch speed (deg//sec)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/pitch speed (deg//sec)
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/elevation speed (deg//sec)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation speed (deg//sec)
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/travel angle (deg)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/pitch angle (deg)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/pitch angle (deg)
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/elevation angle (deg)	Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)

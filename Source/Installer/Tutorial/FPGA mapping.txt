@@ -1,0 +1,5 @@
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/elevation speed (deg//sec)	Targets/Controller/Hardware/Chassis/FPGA/RIO0/Output/Axis Velocities/Elevation Velocity
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/pitch speed (deg//sec)	Targets/Controller/Hardware/Chassis/FPGA/RIO0/Output/Axis Velocities/Pitch Velocity
+Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Outports/output/travel speed (deg//sec)	Targets/Controller/Hardware/Chassis/FPGA/RIO0/Output/Axis Velocities/Travel Velocity
+Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/Fan Power/Right Fan Power	Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Inports/motor voltage 2
+Targets/Controller/Hardware/Chassis/FPGA/RIO0/Input/Fan Power/Left Fan Power	Targets/Controller/Simulation Models/Models/Linear Helicopter Model/Inports/motor voltage 1

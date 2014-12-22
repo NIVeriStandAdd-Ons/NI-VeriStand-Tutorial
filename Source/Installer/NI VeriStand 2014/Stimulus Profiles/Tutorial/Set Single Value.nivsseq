@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RealTimeSequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FileFormatVersion Major="2011" Minor="0" Fix="0" Build="7" />
+	<Version Major="1" Minor="0" Fix="0" Build="3" />
+	<References />
+	<Variables>
+		<ReturnType>
+			<Identifier>Pass</Identifier>
+			<DefaultValue xsi:type="VoidValue" />
+		</ReturnType>
+		<Parameters>
+			<ParameterDeclaration>
+				<Identifier>Channel</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Identifier>NewValue</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+		</Parameters>
+		<LocalVariables />
+	</Variables>
+	<Code>
+		<Setup>
+			<Body />
+		</Setup>
+		<Main>
+			<Body>
+				<Statement xsi:type="Expression">
+					<ExpressionString>Channel=NewValue</ExpressionString>
+				</Statement>
+			</Body>
+		</Main>
+		<CleanUp>
+			<Body />
+		</CleanUp>
+	</Code>
+</RealTimeSequence>

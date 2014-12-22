@@ -1,0 +1,282 @@
+<?xml version='1.0' standalone='yes' ?>
+<?xml-stylesheet type="text/xsl" href='NI VeriStand FPGA DMA.xsl'?>
+<FPGADMAChannelData xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "NI VeriStand FPGA DMA.xsd">
+
+    <!--This is a sample XML file for specifying the content of the DMA bitstreams.  Comments describe the various elements in the file.
+    Many of the elements are optional.  The comment will specify if an element is optional and any default value that will be used if the
+    tag is left out. -->
+
+    <Version>2.0</Version><!--Version of XML file.  Always 2.0. -->
+
+    <Bitfile>NIVS Hands On PXI 7854R.lvbitx</Bitfile>
+        <!--Optional: Name of bitfile.  The default value is the same name as this file, but with the
+        extension .lvbitx.  The bitfile must be in same directory as this file. -->
+
+    <Categories>
+        <!--Optional: Categories describes the hierarchy of the channels used in System Explorer.  If Categories is not specified
+        the hierarchy will be inferred based on the Category tags on the individual channels.  Empty descriptions and default symbols will be used
+        for all folders that are not found in the Categories section, but referenced by a channel. -->
+
+        <Category>
+            <!--Category is a single level of the hierarchy.  It can specify a description and a symbol to use in the tree, as well
+            as zero or more contained category -->
+
+            <Name>Input</Name> <!--The name as the category should be displayed in the tree.  The name must be unique with in its set of siblings. -->
+            <Description>This section contains all the inputs from the FPGA Board.</Description> <!--Optional: Description to be shown in System Explorer -->
+          
+            <Category>  <!--PWM InputCategory-->
+              <Name>Fan Power</Name>
+              <Description>This section contains the Fan Power Inputs generated from the sbRIO controller and wired into the PXI R Seires card. This is implemented with PWMs.</Description>
+              <Symbol>PWM In</Symbol>
+            </Category>
+
+<!--			<Category>
+              <Name>Encoder</Name>
+              <Description>This section contains all the Encoder inputs from the FPGA Board.</Description>
+			</Category>-->
+
+        </Category> <!--End of Inputs Category-->
+      
+        <Category> <!--Beginning of Outputs Category-->
+            <Name>Output</Name>
+            <Description>This section contains all the outputs from the FPGA Board.</Description>
+
+            <Category> <!--PWM Output Category-->
+             <Name>Set Points</Name>
+             <Description>This section contains the Set Point outputs generated from the PXI and wired into the sbRIO Controller. This is implemented with PWMs.</Description>
+             <Symbol>PWM Out</Symbol>
+            </Category>
+
+            <Category> <!--Encoder Output Category-->
+             <Name>Axis Velocities</Name>
+             <Description>This section contains all the individual helicopter axis encoder outputs from the PXI R Series card.</Description>
+            </Category>
+
+            <Category> <!--Digital Output Category-->
+             <Name>Digital</Name>
+             <Description>This section contains all the Digital outputs from the FPGA Board.</Description>
+            </Category>        
+        
+        </Category> <!--End of Outputs Category-->
+
+    </Categories> <!--End of defining Categories-->
+
+  
+    <DMA_Read><!--Specifies the content of the DMA_Read DMA channel. -->
+        
+        <Packets>8</Packets>
+            <!--Number of U64 packets contained in the DMA stream.  The number of Packet elements may be less than this number.
+            If the number of Packet elements is less than the number of packets, then all the packets are read but the last U64 are ignored. -->
+
+        <Packet/> <!--Packet 1-->
+            <!--An empty Packet element specifies an element that is to be ignored.  The first bit of the first read packet must contain a
+            Late Status field.  If we do not wish to use this channel you can specify an empty packet.  If you want to make this status bit available 
+            to the user you can specify it as a Boolean channel in the packet. -->
+     
+        <Packet> <!--Packet 2-->
+<!--          <PWM>
+            <Name>PWM 0 In (Loopback)</Name>
+            <Description>PWM 0 Input on Connector 2. This is the looped back input of PWM 0 Out.</Description>
+            <Category>Input\PWM</Category>
+            <Scale>20</Scale>
+            <Unit>Deg</Unit>
+            <Symbol>PWM In</Symbol>
+            <Parameters>
+              <U32>
+                <Name>PWM Timeout (ms)</Name>
+                <ControlName>PWM 0 In Timeout Loopback</ControlName>
+                <InitialValue>10</InitialValue>
+                <Scale>107374.182375</Scale>--> <!--(2^32)(U32) / 40000 ticks (1ms) = 107374; This is saying that -->
+<!--              </U32>
+            </Parameters>
+          </PWM>-->
+        </Packet>
+
+        <Packet> <!--Packet 3-->
+<!--          <PWM>
+            <Name>PWM 1 In (Loopback)</Name>
+            <Description>PWM 1 Input on Connector 2. This is the looped back input of PWM 1 Out.</Description>
+           <Category>Input\PWM</Category>
+            <Scale>360</Scale>
+			<Offset>-180</Offset>
+            <Unit>Deg</Unit>
+            <Symbol>PWM In</Symbol>
+            <Parameters>
+              <U32>
+                <Name>PWM Timeout (ms)</Name>
+                <ControlName>PWM 1 In Timeout Loopback</ControlName>
+                <InitialValue>10</InitialValue>
+                <Scale>107374.182375</Scale>--> <!--(2^32)(U32) / 40000 ticks (1ms) = 107374; This is saying that -->
+<!--              </U32>
+            </Parameters>
+          </PWM>-->
+        </Packet>
+
+        <Packet> <!--Packet 4-->
+          <PWM>
+            <Name>Left Fan Power</Name>
+            <Description>Left Fan Power Input on Connector 1 of the PXI R Series card from the sbRIO controller. This is implemented with a PWM.</Description>
+            <Category>Input\Fan Power</Category>
+            <Scale>2</Scale>
+			<Offset>-1</Offset>
+            <Unit>%</Unit>
+            <Symbol>PWM In</Symbol>
+            <Parameters>
+              <U32>
+                <Name>PWM Timeout (ms)</Name>
+                <ControlName>PWM 2 In Timeout</ControlName>
+                <InitialValue>10</InitialValue>
+                <Scale>107374.182375</Scale> <!--(2^32)(U32) / 40000 ticks (1ms) = 107374; This is saying that -->
+              </U32>
+            </Parameters>
+          </PWM>
+        </Packet>
+
+        <Packet> <!--Packet 5-->
+          <PWM>
+            <Name>Right Fan Power</Name>
+            <Description>Right Fan Power Input on Connector 1 of the PXI R Series card from the sbRIO controller. This is implemented with a PWM.</Description>
+            <Category>Input\Fan Power</Category>
+            <Scale>2</Scale>
+			<Offset>-1</Offset>
+            <Unit>%</Unit>
+            <Symbol>PWM In</Symbol>
+            <Parameters>
+              <U32>
+                <Name>PWM Timeout (ms)</Name>
+                <ControlName>PWM 3 In Timeout</ControlName>
+                <InitialValue>10</InitialValue>
+                <Scale>107374.182375</Scale> <!--(2^32)(U32) / 40000 ticks (1ms) = 107374; This is saying that -->
+              </U32>
+            </Parameters>
+          </PWM>
+        </Packet>
+
+        <Packet> <!--Packet 6-->
+<!--		 <I32>
+			<Name>Encoder 0 Movement (Loopback)</Name>
+            <Description>The movement, in counts moved per interval of the main VeriStand loop, of  Encoder 0 on Connector 2. This is the looped back input of Encoder 0 out.</Description>
+           <Category>Input\Encoder</Category>
+            <Unit>Counts/Interval</Unit>
+		 </I32>
+		 <I32>
+            <Name>Encoder 0 Position (Loopback)</Name>
+            <Description>The position, in counts, of Encoder 0 on Connector 2. This is the looped back input of Encoder 0 out.</Description>
+            <Category>Input\Encoder</Category>
+            <Unit>Counts</Unit>
+ 		 </I32>-->
+        </Packet>
+ 
+        <Packet> <!--Packet 7-->
+<!--		 <I32>
+			<Name>Encoder 1 Movement (Loopback)</Name>
+            <Description>The movement, in counts moved per interval of the main VeriStand loop, of Encoder 1 on Connector 2. This is the looped back input of Encoder 1 out.</Description>
+            <Category>Input\Encoder</Category>
+            <Unit>Counts/Interval</Unit>
+		 </I32>
+		 <I32>
+            <Name>Encoder 1 Position (Loopback)</Name>
+            <Description>The position, in counts, of Encoder 1 on Connector 2. This is the looped back input of Encoder 1 out.</Description>
+            <Category>Input\Encoder</Category>
+            <Unit>Counts</Unit>
+ 		 </I32>-->
+        </Packet>
+
+        <Packet> <!--Packet 8-->
+<!--		 <I32>
+			<Name>Encoder 2 Movement (Loopback)</Name>
+            <Description>The movement, in counts moved per interval of the main VeriStand loop, of Encoder 2 on Connector 2. This is the looped back input of Encoder 2 out.</Description>
+            <Category>Input\Encoder</Category>
+            <Unit>Counts/Interval</Unit>
+		 </I32>
+		 <I32>
+            <Name>Encoder 2 Position (Loopback)</Name>
+            <Description>The position, in counts, of Encoder 2 on Connector 2. This is the looped back input of Encoder 2 out.</Description>
+            <Category>Input\Encoder</Category>
+            <Unit>Counts</Unit>
+ 		 </I32>-->
+        </Packet>     
+    </DMA_Read>
+
+    <DMA_Write><!--DMA_Write uses the same structure as DMA_Read.  Any differences between read and write operations are noted above. -->
+
+        <Packets>5</Packets>
+
+		<Packet> <!--Packet 1-->
+            <PWM>
+              <Name>Elevation Set Point</Name>
+              <Description>Elevation Set Point Output on Connector 1 from the PXI R Series card to the sbRIO controller. This is implemented with a PWM.</Description>
+              <Category>Output\Set Points</Category>
+              <Scale>20</Scale>
+              <Unit>Deg</Unit>
+              <Symbol>PWM Out</Symbol>
+            </PWM>
+          </Packet>
+      
+          <Packet> <!--Packet 2-->
+            <PWM>
+              <Name>Travel Set Point</Name>
+              <Description>Travel Set Point Output on Connector 1 from the PXI R Series card to the sbRIO controller. This is implemented with a PWM.</Description>
+              <Category>Output\Set Points</Category>
+              <Scale>360</Scale>
+			  <Offset>-180</Offset>
+              <Unit>Deg</Unit>
+              <Symbol>PWM Out</Symbol>
+            </PWM>
+          </Packet>
+
+		<Packet> <!--Packet 3-->
+<!--            <PWM>
+              <Name>PWM 2 Out (Loopback)</Name>
+              <Description>PWM 2 Output on Connector 2. This is the looped back output to PWM 2 In.</Description>
+              <Category>Output\PWM</Category>
+              <Scale>2</Scale>
+			  <Offset>-1</Offset>
+              <Unit>%</Unit>
+              <Symbol>PWM Out</Symbol>
+            </PWM>-->
+          </Packet>
+      
+          <Packet> <!--Packet 4-->
+<!--            <PWM>
+              <Name>PWM 3 Out (Loopback)</Name>
+              <Description>PWM 3 Output on Connector 2. This is the looped back output to PWM 3 In.</Description>
+             <Category>Output\PWM</Category>
+              <Scale>2</Scale>
+		  	  <Offset>-1</Offset>
+              <Unit>%</Unit>
+              <Symbol>PWM Out</Symbol>
+            </PWM>-->
+          </Packet>
+
+        <Packet> <!--Packet 5-->
+		 <I16>
+            <Name>Elevation Velocity</Name>
+            <Description>The elevation velocity of the helicopter output by the PXI R Series card to the sbRIO. This is implemented with an encoder, in pulses per second, on Connector 1. This value is scaled to provide higher resolution.</Description>
+            <Category>Output\Axis Velocities</Category>
+			<Scale>65</Scale>
+            <Unit>Pulses/Second</Unit>
+ 		 </I16>
+		 <I16>
+            <Name>Pitch Velocity</Name>
+            <Description>The pitch velocity of the helicopter output by the PXI R Series card to the sbRIO. This is implemented with an encoder, in pulses per second, on Connector 1. This value is scaled to provide higher resolution.</Description>
+            <Category>Output\Axis Velocities</Category>
+			<Scale>65</Scale>
+            <Unit>Pulses/Second</Unit>
+ 		 </I16>
+		 <I16>
+            <Name>Travel Velocity</Name>
+            <Description>The travel velocity of the helicopter output by the PXI R Series card to the sbRIO. This is implemented with an encoder, in pulses per second, on Connector 1. This value is scaled to provide higher resolution.</Description>
+            <Category>Output\Axis Velocities</Category>
+			<Scale>65</Scale>
+            <Unit>Pulses/Second</Unit>
+ 		 </I16>
+		 <Boolean>
+            <Name>Controller Reset</Name>
+            <Description>This digital output is used as a controller reset line on Connector 1 of the PXI R Series card. When High, the controller resets it's values for helicopter position.</Description>
+            <Category>Output\Digital</Category>
+ 		 </Boolean>
+        </Packet>     
+
+    </DMA_Write>
+</FPGADMAChannelData>

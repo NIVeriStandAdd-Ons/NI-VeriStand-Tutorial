@@ -1,0 +1,90 @@
+#VRML V2.0 utf8
+
+DEF Model Transform{
+  children [
+    DEF Revolve Transform{
+      children [
+        DEF PivotBox Transform{
+          children Shape{
+            geometry Box{ size .1 .24 .17}
+            appearance DEF Gray Appearance{ material Material{ diffuseColor .8 .8 .8 ambientIntensity .8}}
+          }
+          translation 0 0 0
+        }
+        DEF Yaw Transform{
+        children [
+          DEF Arm Transform{
+            children
+              Shape{
+                geometry Cylinder{ height 3.95 radius .035 }
+                appearance DEF Blue Appearance{ material Material{ diffuseColor 0 0 1 specularColor .8 .8 .8 ambientIntensity .4} }
+               }
+             translation .3 0 0
+             rotation 0 0 1 1.57
+          }
+          DEF CounterWeight Transform{
+            children Shape{
+              geometry Box{ size .27 .27 .27 }
+              appearance DEF Gold Appearance{ material Material{ diffuseColor .6 .6 0 specularColor .8 .8 .8 ambientIntensity .6}}
+            }
+            translation -1.6 0 -.14
+          }
+          DEF Pitch Transform{
+            children Inline{ url "Prop.wrl" }
+            rotation 1 0 0 0
+          } # end pitch
+        ]
+        rotation 0 0 1 .32
+      } # end Yaw
+      ]
+      rotation 0 1 0 3.14
+    } # end Revolve
+    DEF Base Transform{
+      children [
+        Transform{
+          children Shape{
+            geometry Box{ size .2 .26 .2 }
+            appearance DEF Black Appearance{ material Material{ diffuseColor .1 .1 .1 specularColor 1 1 1} }
+          }
+          translation 0 .13 0
+        }
+        Transform{
+          children Shape{ geometry Box{ size .15 .32 .15 } appearance USE Black }
+          translation 0 .42 0
+        } 
+        Transform{
+          children Shape{ geometry Cylinder{ radius .01 height .24 } appearance USE Black}
+          translation 0 .67 0
+        }
+      ]
+      translation 0 -.9 0
+    } #end Base
+    DEF Floor Transform{
+      children Shape{
+        geometry ElevationGrid{
+          xDimension 11
+          xSpacing .3
+          zDimension 11
+          zSpacing .3
+          height[
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0 0
+          ] 
+        }
+        appearance DEF Brown Appearance{ material Material{ diffuseColor .8 .68 .5 ambientIntensity .7} }
+      }
+      translation -1.5 -.9 -1.5
+    }
+  ]
+  translation 0 0 0
+  rotation 0 -1 0 1.57
+}

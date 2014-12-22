@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RealTimeSequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FileFormatVersion Major="2012" Minor="0" Fix="0" Build="0" />
+	<Version Major="1" Minor="0" Fix="0" Build="27" />
+	<References>
+		<Reference>
+			<Path>&lt;VeriStand&gt;:\nivs.lib\Sequence Library\Standard\Timing\WaitUntilSettled.nivsseq</Path>
+			<Alias>WaitUntilSettled</Alias>
+		</Reference>
+	</References>
+	<Variables>
+		<ReturnType>
+			<Identifier>Pass</Identifier>
+			<DefaultValue xsi:type="BooleanValue">
+				<Value>false</Value>
+			</DefaultValue>
+		</ReturnType>
+		<Parameters>
+			<ParameterDeclaration>
+				<Description>The signal to wait to settle within the specified limits</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_Signal</ResXKey>
+				<Identifier>ElevationSignal</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/elevation angle (deg)" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The upper limit to check against. This check is inclusive.</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_UpperLimit</ResXKey>
+				<Identifier>ElevationSetpoint</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>150</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Elevation Setpoint" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The upper limit to check against. This check is inclusive.</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_UpperLimit</ResXKey>
+				<Identifier>ElevationTolerance</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>150</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The time in seconds for which the signal must remain within the specified limits</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_SettleTime</ResXKey>
+				<Identifier>ElevationSettleTime</Identifier>
+				<DefaultValue xsi:type="DoubleValue" Units="sec">
+					<Value>10</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The maximum time in seconds to wait for the signal to settle</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_Timeout</ResXKey>
+				<Identifier>ElevationTimeout</Identifier>
+				<DefaultValue xsi:type="DoubleValue" Units="sec">
+					<Value>60</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The signal to wait to settle within the specified limits</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_Signal</ResXKey>
+				<Identifier>TravelSignal</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/travel angle (deg)" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The lower limit to check against. This check is inclusive.</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_LowerLimit</ResXKey>
+				<Identifier>TravelSetpoint</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>50</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByReference</EvaluationMethod>
+				<DefaultAssignment Path="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The upper limit to check against. This check is inclusive.</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_UpperLimit</ResXKey>
+				<Identifier>TravelTolerance</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>150</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The time in seconds for which the signal must remain within the specified limits</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_SettleTime</ResXKey>
+				<Identifier>TravelSettleTime</Identifier>
+				<DefaultValue xsi:type="DoubleValue" Units="sec">
+					<Value>10</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+			<ParameterDeclaration>
+				<Description>The maximum time in seconds to wait for the signal to settle</Description>
+				<ResXKey>ContextHelp_Stimulus Profile Editor UI\WaitUntilSettled_Timeout</ResXKey>
+				<Identifier>TravelTimeout</Identifier>
+				<DefaultValue xsi:type="DoubleValue" Units="sec">
+					<Value>60</Value>
+				</DefaultValue>
+				<EvaluationMethod>ByValue</EvaluationMethod>
+				<DefaultAssignment Path="" />
+			</ParameterDeclaration>
+		</Parameters>
+		<LocalVariables>
+			<LocalDeclaration>
+				<Identifier>TravelPass</Identifier>
+				<DefaultValue xsi:type="BooleanValue">
+					<Value>false</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+			<LocalDeclaration>
+				<Identifier>ElevationPass</Identifier>
+				<DefaultValue xsi:type="BooleanValue">
+					<Value>false</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+			<LocalDeclaration>
+				<Identifier>ElevationUpperLimit</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+			<LocalDeclaration>
+				<Identifier>ElevationLowerLimit</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+			<LocalDeclaration>
+				<Identifier>TravelUpperLimit</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+			<LocalDeclaration>
+				<Identifier>TravelLowerLimit</Identifier>
+				<DefaultValue xsi:type="DoubleValue">
+					<Value>0</Value>
+				</DefaultValue>
+			</LocalDeclaration>
+		</LocalVariables>
+	</Variables>
+	<Code>
+		<Setup>
+			<Body>
+				<Statement xsi:type="Expression">
+					<ExpressionString>ElevationUpperLimit = ElevationSetpoint+ElevationTolerance</ExpressionString>
+				</Statement>
+				<Statement xsi:type="Expression">
+					<ExpressionString>ElevationLowerLimit = ElevationSetpoint-ElevationTolerance</ExpressionString>
+				</Statement>
+				<Statement xsi:type="Expression">
+					<ExpressionString>TravelUpperLimit = TravelSetpoint+TravelTolerance</ExpressionString>
+				</Statement>
+				<Statement xsi:type="Expression">
+					<ExpressionString>TravelLowerLimit = TravelSetpoint-TravelTolerance</ExpressionString>
+				</Statement>
+			</Body>
+		</Setup>
+		<Main>
+			<Body>
+				<Statement xsi:type="Multitask">
+					<Description>Wait for settled angles</Description>
+					<Task>
+						<Body>
+							<Statement xsi:type="Expression">
+								<Description>WaitUntilSettled returns true if it timed out, so need to negate</Description>
+								<ExpressionString>ElevationPass = !WaitUntilSettled(ElevationSignal, ElevationUpperLimit, ElevationLowerLimit, ElevationSettleTime, ElevationTimeout)</ExpressionString>
+							</Statement>
+						</Body>
+						<TaskName>WaitForElevation</TaskName>
+					</Task>
+					<Task>
+						<Body>
+							<Statement xsi:type="Expression">
+								<ExpressionString>TravelPass = !WaitUntilSettled(TravelSignal, TravelUpperLimit, TravelLowerLimit, TravelSettleTime, TravelTimeout)</ExpressionString>
+							</Statement>
+						</Body>
+						<TaskName>WaitForTravel</TaskName>
+					</Task>
+				</Statement>
+				<Statement xsi:type="Expression">
+					<ExpressionString>Pass = TravelPass &amp;&amp; ElevationPass</ExpressionString>
+				</Statement>
+			</Body>
+		</Main>
+		<CleanUp>
+			<Body />
+		</CleanUp>
+	</Code>
+</RealTimeSequence>

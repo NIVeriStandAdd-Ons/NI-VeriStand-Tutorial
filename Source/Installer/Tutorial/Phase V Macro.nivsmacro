@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ni.com/VeriStand/WorkspaceMacro">
+	<Version Major="3" Minor="0" Fix="0" Build="0" />
+	<Commands StartTime="2013-10-21T16:11:24.8276223-05:00">
+		<Workspace RelativeTime="1.4900852">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-2.8749259607307494" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.4920852999999998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="0.16811943798597895" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.5300874999999998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="3.0827721824336862" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.7290988999999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="5.851386059991313" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.8341048999999998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="8.4629523076509088" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.888108">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="9.9116048812612689" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="1.9151095">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="12.455034229053268" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.1831248">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="14.186371527870463" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.2121265">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="16.602692099421333" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.2641294999999997">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="18.813270986745124" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.2801304">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="20.832760174905843" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.3111322">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="22.852249363066562" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.4211385">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="25.062828250390339" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.5171438999999998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="26.855056911982516" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.5651466999999997">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="29.210486120758389" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.6211499">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="31.753915468550417" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.7221557">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="33.202568042160749" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="2.8331619999999997">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="36.981948892833032" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.008172">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="38.016897578010571" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.0261731">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="40.510571603960159" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.1281789">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="41.311256013428419" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.2031832">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="43.768871161924494" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.2601864">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="46.29967668231518" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.3331906">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="46.752769528512346" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.4631981">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="49.195837884118532" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.5042003999999998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="49.469648981798" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.6752102">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="51.8106570871619" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="3.7082121">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="54.16608629593776" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="4.72127">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="51.8106570871619" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="4.9502831">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="49.469648981798" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.0102864999999994">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="46.752769528512346" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.0532889999999995">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="44.358295888272153" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.1702957">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="43.768871161924494" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.2463">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="41.311256013428419" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.3203043">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="40.510571603960159" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.3253046">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="38.016897578010571" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.3913082999999995">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="34.488274866883472" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.4473115">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="33.202568042160749" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.4943142">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="30.753126734927463" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.6313220999999993">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="29.210486120758389" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.7563292">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="26.855056911982516" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.839334">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="25.062828250390339" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.8773361">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="23.064454139579468" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="5.9463401">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="20.832760174905843" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.1353509">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="18.601066210232219" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.1423513">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="16.602692099421333" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.3213615">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="14.186371527870463" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.5633754">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="11.552163879864821" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.5943771">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="9.9116048812612689" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.6113781">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="7.177245482928214" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="6.7693872">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="4.2548859455790335" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.0164013">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="1.1549487458515273" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.1384083">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-2.1033508121128222" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.4704273">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-5.4914399011838526" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.7024405">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-8.9719432349989887" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.8094465999999994">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-8.6528416618140938" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="7.9284535">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-12.500565946126088" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="8.7485004">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-16.730634021610584" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="8.8715073999999987">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-20.878291891978648" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="9.7055551">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-21.78116224116711" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="9.9075667">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-26.156080638103717" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.005572299999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-27.727262814193978" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.163581299999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-32.178377375180389" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.1805823">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-34.533806583956277" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.2015835">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-38.824766022215776" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.230585099999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-41.986167782846024" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="10.386593999999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-45.833892067158018" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.0296308">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-42.575592509193676" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.071633199999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-39.811595330081332" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.191640099999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-36.208252081762673" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.2756449">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-32.178377375180389" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.347648999999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-30.250553938598244" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.784673999999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-26.156080638103717" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.8116756">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-24.870373813381008" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="11.993686">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-20.878291891978648" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="12.0226876">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-20.13378390102703" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="12.111692699999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-16.348290230438081" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="12.2346998">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-12.500565946126088" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="12.4807138">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-8.9719432349989887" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="13.015744399999999">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-5.4914399011838526" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="13.0967491">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-6.0219286348990835" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="13.2297567">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="-2.8749259607307494" />
+			</SetChannelValues>
+		</Workspace>
+		<Workspace RelativeTime="13.3477634">
+			<SetChannelValues>
+				<Channel Name="Targets/Controller/Simulation Models/Models/Linear Helicopter Controller/Inports/Travel Setpoint" Value="0.16811943798597895" />
+			</SetChannelValues>
+		</Workspace>
+	</Commands>
+</Macro>
