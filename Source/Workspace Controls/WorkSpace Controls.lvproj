@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="14008000">
+<Project Type="Project" LVVersion="15008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="IOScan.Faults" Type="Str"></Property>
 		<Property Name="IOScan.NetVarPeriod" Type="UInt">100</Property>
@@ -95,21 +95,21 @@
 				<Property Name="Bld_buildCacheID" Type="Str">{3E2BCFF0-3CFC-4097-9608-E5B0A09EDCC5}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">Display Template</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../Installer/NI VeriStand 2014/Display Templates</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../Installer/NI VeriStand 2015/Display Templates</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{42D8613B-4542-49A0-9093-91DFF8AD7522}</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
-				<Property Name="Destination[0].path" Type="Path">../Installer/NI VeriStand 2014/Display Templates</Property>
+				<Property Name="Destination[0].path" Type="Path">../Installer/NI VeriStand 2015/Display Templates</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../Installer/NI VeriStand 2014/Display Templates/data</Property>
+				<Property Name="Destination[1].path" Type="Path">../Installer/NI VeriStand 2015/Display Templates/data</Property>
 				<Property Name="Destination[2].destName" Type="Str">HeliSubVI LLB</Property>
-				<Property Name="Destination[2].path" Type="Path">../Installer/NI VeriStand 2014/Display Templates/HeliSubVI LLB.ll_</Property>
+				<Property Name="Destination[2].path" Type="Path">../Installer/NI VeriStand 2015/Display Templates/HeliSubVI LLB.ll_</Property>
 				<Property Name="Destination[2].type" Type="Str">LLB</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
 				<Property Name="Source[0].Container.applyDestination" Type="Bool">true</Property>
 				<Property Name="Source[0].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{2D1DBC71-2F83-4AA5-B953-6CFCC6EADBA8}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{1FDE0223-D4E1-427A-A82B-3A9F946A3C3E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">2</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Go into LLB/Helicopter - Draw Model.vi</Property>
